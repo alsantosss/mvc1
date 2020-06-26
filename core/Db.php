@@ -21,7 +21,6 @@ class Db
     }
 }
 
-$db = new Db();
-$db->getDb();
+
 
 ?>
