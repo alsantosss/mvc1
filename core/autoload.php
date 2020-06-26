@@ -1,6 +1,6 @@
 <?php
 spl_autoload_register(function ($class_name){
-    $dirs = array('../controllers','core','../models');
+    $dirs = array('controllers','core','models');
     foreach($dirs as $dir){ 
         $file = $dir.'/'.$class_name. '.php';
         if (file_exists($file)){
