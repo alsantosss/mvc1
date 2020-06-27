@@ -1,9 +1,6 @@
 <?php
 require_once 'core/config.php';
 
-$db = new Db();
-$db->getDb();
-
-$home = new homeController();
-$home->index();
+$core = new Core();
+$core->run();
 ?>
