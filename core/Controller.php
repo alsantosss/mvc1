@@ -11,7 +11,7 @@ class Controller
          * echo $nome; retorna Andre.
          */
         extract($viewData);
-        include '/views'.$viewName.'.php';
+        include 'views/'.$viewName.'.php';
     }
 }
 

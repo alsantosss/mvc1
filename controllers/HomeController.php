@@ -5,7 +5,12 @@ class HomeController extends Controller
     {
         $u = new Usuario();
         $u->setName('André Santos');
-        echo $u->getName();
+        $data = array(
+            'nome'=>$u->getName(),
+            'tit_page'=>'Página Exemplo'
+        );
+
+        $this->loadView('home',$data);
     }
 }
 

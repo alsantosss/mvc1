@@ -5,11 +5,8 @@ class Db
 
     public function __construct()
     {
-        $dsn="mysql:dbname=blog;host=localhost";
-        $user="root";
-        $pass="";
         try {
-            $this->pdo=new PDO($dsn,$user,$pass);
+            $this->pdo=new PDO(DSN,USER,PASS);
         } catch (PDOException $e) {
             echo "Erro de acesso: ".$e->getMessage();
         }
