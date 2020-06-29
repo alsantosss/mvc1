@@ -11,7 +11,10 @@
 <body>
     
 <?php
-    include 'views/'.$viewName.'.php';
+    /**
+     * Insere os dados na Template
+     */
+    $this->loadViewInTemplate($viewName, $viewData);
     
 ?>
 

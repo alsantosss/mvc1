@@ -1,15 +1,18 @@
 <?php
 class Usuario extends Model
 {
-    private $nome;
+    public function getUserData()
+    {   
+        $array = array();
+        $sql = "SELECT * FROM usuarios";
+        $sql = $this->db->query($sql);
 
-    public function setName($n)
-    {
-        $this->nome = $n;
+        if ($sql->rowCount()>0) {
+            $array = $sql->fetchAll();
+        }
+
+        return $array;
+        // print_r($array);exit;
     }
 
-    public function getName()
-    {
-        return $this->nome;
-    }
 }

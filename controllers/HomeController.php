@@ -4,13 +4,11 @@ class HomeController extends Controller
     public function index()
     {
         $u = new Usuario();
-        $u->setName('André Santos');
-        $data = array(
-            'nome'=>$u->getName(),
-            'tit_page'=>'Página Exemplo'
-        );
+        $dados['usuarios'] = $u->getUserData();
+        $dados['tit_page'] ='Página Home';
+        
 
-        $this->loadView('home',$data);
+        $this->loadView('home',$dados);
     }
 
     public function sobre()

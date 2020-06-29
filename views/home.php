@@ -1,14 +1,9 @@
     
     
-    <h1>Título <?= $tit_page; ?></h1>
-    <p>Meu nome é <?= $nome; ?></p>
-    <table border="1">
-        <thead>
-            <th>Nome</th><th>Titulo</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td><?= $nome ?></td><td><?= $tit_page ?></td>
-            </tr>
-        </tbody>    
-    </table>
+    <h1><?= $tit_page; ?></h1>
+
+    <?php 
+        foreach($usuarios as $dados){
+            echo "<br>Nome : ".$dados['nome'] . "<br> Email: " . $dados['email'] . "<hr>";
+        }?>
+    
