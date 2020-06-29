@@ -13,14 +13,10 @@ class HomeController extends Controller
 
     public function sobre()
     {
-        $u = new Usuario();
-        $u->setName('André Santos');
-        $data = array(
-            'nome'=>$u->getName(),
-            'tit_page'=>'Página Sobre'
-        );
+        $s = new Sobre();
+        $dados['sobre'] = $s->getSobre();
 
-        $this->loadView('sobre',$data);
+        $this->loadView('sobre',$dados);
     }
 }
 

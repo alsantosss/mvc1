@@ -1,10 +1,10 @@
 <?php
-class Usuario extends Model
+class Sobre extends Model
 {
-    public function getUserData()
+    public function getSobre()
     {   
         $array = array();
-        $sql = "SELECT * FROM usuarios";
+        $sql = "SELECT * FROM sobre";
         $sql = $this->db->query($sql);
 
         if ($sql->rowCount()>0) {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 29/06/2020 às 03:14
+-- Tempo de geração: 29/06/2020 às 07:07
 -- Versão do servidor: 10.4.11-MariaDB
 -- Versão do PHP: 7.3.17
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `blog`
 --
-CREATE DATABASE IF NOT EXISTS `blog` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `blog`;
 
 -- --------------------------------------------------------
 
@@ -132,6 +130,26 @@ INSERT INTO `posts` (`id`, `matricula`, `titulo`, `data_criado`, `corpo`, `autor
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `sobre`
+--
+
+CREATE TABLE `sobre` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(100) NOT NULL,
+  `foto` varchar(100) NOT NULL,
+  `corpo` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Despejando dados para a tabela `sobre`
+--
+
+INSERT INTO `sobre` (`id`, `titulo`, `foto`, `corpo`) VALUES
+(1, 'Sobre Nós', 'Applewatch2.jpg', 'Penit. II \"Gilmar Monteiro de Souza\" de Balbinos\r\nCoordenadoria da Região Noroeste\r\nEndereço: Rodovia de Acesso Assírio Rigotto, km 2,6 Córrego Grande (Zona Rural)\r\nCEP: 16640-001 - Balbinos - SP\r\nE-mail: cleuberjunior@sp.gov.br\r\nFone: (14) 3583 1337  Fax: (14) 3583 1404 r 206\r\nPopulação prisional - data: 26/jun\r\n\r\nCapacidade: 844   População: 1625\r\nFicha Técnica\r\n\r\nÁrea construida: 15.521,97 m²\r\nData de inauguração: 03/03/2006\r\nRegime: fechado');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para tabela `usuarios`
 --
 
@@ -169,6 +187,12 @@ ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices de tabela `sobre`
+--
+ALTER TABLE `sobre`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
@@ -189,6 +213,12 @@ ALTER TABLE `fotos`
 --
 ALTER TABLE `posts`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+
+--
+-- AUTO_INCREMENT de tabela `sobre`
+--
+ALTER TABLE `sobre`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
