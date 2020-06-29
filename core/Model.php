@@ -1,12 +1,12 @@
 <?php
-class Db
+class Model
 {
-    private $pdo;
+    protected $db;
 
     public function __construct()
     {
         try {
-            $this->pdo=new PDO(DSN,USER,PASS);
+            $this->db=new PDO(DSN,USER,PASS);
         } catch (PDOException $e) {
             echo "Erro de acesso: ".$e->getMessage();
         }
@@ -14,7 +14,7 @@ class Db
 
     public function getDb()
     {
-        return $this->pdo;
+        return $this->db;
     }
 }
 

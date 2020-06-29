@@ -1,0 +1,51 @@
+body{
+	margin-right: 10%;
+	margin-left: 10%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+	text-align: center;
+	padding: 12px 20px;
+}
+
+form{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid black;
+}
+
+input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type="submit"]{
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.message {
+text-align: center;
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.confirm{
+	background-color: #ADFF2F;
+}
+
+.alert{
+	background-color: #FFD700;
+}
+
+.danger{
+	background-color: #FF0000;
+	color: white;
+}

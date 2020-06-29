@@ -12,6 +12,18 @@ class HomeController extends Controller
 
         $this->loadView('home',$data);
     }
+
+    public function sobre()
+    {
+        $u = new Usuario();
+        $u->setName('André Santos');
+        $data = array(
+            'nome'=>$u->getName(),
+            'tit_page'=>'Página Sobre'
+        );
+
+        $this->loadView('sobre',$data);
+    }
 }
 
 

@@ -11,7 +11,11 @@ class Controller
          * echo $nome; retorna Andre.
          */
         extract($viewData);
-        include 'views/'.$viewName.'.php';
+
+        /**
+         * A view Template é a forma do Site.. é onde os dados serão inseridos
+         */
+        include 'views/template.php';        
     }
 }
 
