@@ -16,6 +16,11 @@ form{
   border: 1px solid black;
 }
 
+th div{
+  text-align: center!important;
+	padding: 12px 20px;
+}
+
 input{
   width: 100%;
   padding: 12px 20px;

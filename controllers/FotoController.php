@@ -7,7 +7,7 @@ class FotoController extends Controller
         $dados['fotos']    = $foto->getFotos();
         $dados['tit_page'] = 'Fotos';
         
-        $this->loadViewInTemplate('foto',$dados);
+        $this->loadView('foto',$dados);
     }
 
     public function foi()
