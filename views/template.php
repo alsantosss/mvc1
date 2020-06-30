@@ -10,7 +10,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <a class="navbar-brand" href="<?=BASE?>home/"><?=UNIDADE?></a>
+  <a class="navbar-brand" href="<?=BASE?>home/"><img src="<?= BASE ?>views/assets/img/p2_icon-60x60.png"><?=UNIDADE?></a>
 
   <div class="collapse navbar-collapse bg-dark">
         <ul class="navbar-nav ml-auto">
